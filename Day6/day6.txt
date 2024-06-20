@@ -1,0 +1,185 @@
+Even Odd
+----------------------------------------
+#!/bin/bash
+while true;
+do
+    echo "Enter the number"
+    read number
+if [ $number -eq 0 ]; then
+   echo "Exits"
+   break 
+fi
+
+
+if [ $((number%2)) -eq 0 ]; then
+      echo " $number is even"
+      else
+      echo " $number is odd"
+fi
+done 
+==================================================================
+
+switch case
+-----------------------------------------
+#!/bin/bash
+echo "Enter the first Number "
+read a
+echo "Enter the Second number "
+read b
+
+
+select option in "add" "sub" "mul" "div" "exits"
+do
+
+case $option in
+   "add")
+     add=$((a+b))
+     echo "$add"
+   ;;
+   "sub")
+      sub=$((a-b))
+
+  echo  "$sub"
+   ;;
+   "mul")
+     mul=$((a*b))
+   echo "$mul"
+   ;;
+   "div")
+    div=$((a/b))
+   echo "$div"
+   ;;
+   "exits")
+   echo "exit the process"
+   break
+   ;;
+   *)
+    echo "invalid option"
+   ;;
+esac
+done
+======================================================================
+function Scripting:
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ greet() {
+> echo "wecome $1 to scripting"
+> }
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ greet aravinthan
+wecome aravinthan to scripting
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ 
+-----------------------------------------------------------
+func.sh
+#!/bin/bash
+
+greet() {
+       echo "Welcome to Functon Scripting..."
+}
+
+greet
+======================================================================
+function.sh
+#!/bin/bash
+
+sum() {
+     res=$(($1+$2))
+    echo "The sum is $res"
+}
+
+sub() {
+   res=$(($1-$2))
+   echo "Subtracion is $res"
+}
+
+mul() {
+  res=$(($1*$2))
+  echo "Multiplication is $res"
+}
+
+dif() {
+    res=$(($1/$2))
+    echo "$res"
+}
+
+
+sum 20 15
+sub 60 40
+mul 30 50
+
+p=$(dif 50 4)
+echo "The division is $p"
+ 
+------o/p------------------
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ ./function.sh
+The sum is 35
+Subtracion is 20
+Multiplication is 1500
+The division is 12
+============================================================================
+fcatorial
+#!/bin/bash
+echo "Enter the number"
+read number
+fact(){
+   facto=1
+   if [ $number -eq -1 ] ; then
+      echo "Negeative numbers not factorial"
+   elif [ $number -eq 0 ] ; then
+      echo "0 is 1"
+   else
+     for ((i=1;i<=$number; i++)); do
+           facto=$(($facto*i))
+     done
+    echo "Factorial of  $number is = $facto"
+   fi
+}
+
+fact
+---------o/p--------------
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ ./factorial.sh
+Enter the number
+4
+Factorial of  4 is = 24
+=====================================================
+Linear Search
+#!/bin/bash
+numbers=(10 20 30 40 50 60 70 80)
+read -p "Enter the Element to search " x
+found="false"
+for (( i=0; i< ${#numbers[@]}; i++ )); do
+   if [ ${numbers[$i]} == $x ]; then
+    echo "$x found at $i index"
+    found="true"
+   fi
+done
+
+if [ $found=="true" ]; then
+   echo "$x found"
+else
+   echo "$x not found"
+fi
+
+
+--------o/p---------
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ ./search.sh
+Enter the Element to search 40
+40 found at 3 index
+40 found
+
+======================================================
+Assign3
+#!/bin/bash
+
+count(){
+filename=$1
+lines=$(wc -l< "$filename")
+echo "Number of lines in $filename: $lines"
+}
+
+
+count "file1.txt"    //creating file nano file1.txt
+count "file2.txt"    //creating file nano file2.txt
+
+
+--------o/p------
+rps@rps-virtual-machine:~/Desktop/Aravinthan$ ./assign3.sh
+Number of lines in file1.txt: 4
+Number of lines in file2.txt: 8

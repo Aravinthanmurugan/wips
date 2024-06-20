@@ -1,0 +1,32 @@
+SQL-DDL-DML
+select * from EMP11 where deptno=20;
+select * from emp11 where UPPER(job)='MANAGER';
+select * from emp11 where UPPER(job)='CLERK' and deptno=20;
+select ename from emp11 where Upper(job)='ANALYST' or Upper(job)='SALESMEN';
+select * from emp11 where upper(job) <> 'MANAGER';
+select * from emp11 where hiredate <='30-11-81';
+select * from emp11 where deptno in (10,20,30);
+select * from emp11 where deptno not in (10,40,30);
+select ename,sal from emp11 where sal BETWEEN 1000 and 3000;
+select ename from emp11 where hiredate not between '30-06-81' and '31-12-81';
+select DISTINCT job from emp11;
+select ename,sal from emp11 where comm is null;
+select ename,job from emp11 where mgr is null;
+select * from emp11 where comm is not null;
+select * from emp11 where sal>2000 and comm is null;
+select empno,ename,job,sal from emp11 where ename like 'A%'; 
+select ename from emp11 where ename like '%S';
+SELECT ENAME FROM EMP11
+WHERE ENAME LIKE '%\_%' ESCAPE '\';
+---
+create table employee(
+empname varchar(20),
+des varchar(15),
+dept varchar(15)
+);
+select * from example;
+ALTER table employee rename to example;
+insert INTO employee VALUES('Aravinthan','Manager','Analayst');
+insert INTO employee VALUES('Chandra','Manager','Management');
+insert INTO employee VALUES('Alagukanna','Manager','Finace');
+alter table example add exper number(2);

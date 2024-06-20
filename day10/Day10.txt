@@ -1,0 +1,87 @@
+CREATE  TABLE air_passenger_profile11 (   
+profile_id VARCHAR(10)  PRIMARY KEY,   
+password VARCHAR(10)  ,   
+first_name VARCHAR(10)  ,   
+last_name VARCHAR(10)  ,   
+address VARCHAR(100)  ,   
+mobile_number NUMBER(10) ,   
+email_id VARCHAR(30)   
+); 
+
+CREATE  TABLE air_credit_card_details11 (   
+profile_id VARCHAR(10)  ,   
+card_number NUMBER(12),   
+card_type VARCHAR(10),   
+expiration_month NUMBER(2),   
+expiration_year NUMBER(2),
+FOREIGN KEY(profile_id) REFERENCES air_passenger_profile11(profile_id)
+); 
+
+
+CREATE  TABLE air_flight11(   
+flight_id VARCHAR(10) PRIMARY KEY ,   
+airline_id VARCHAR(10)  ,   
+airline_name VARCHAR(30)  ,   
+from_location VARCHAR(20) ,   
+to_location VARCHAR(20)  ,   
+departure_time TIMEstamp  ,   
+arrival_time TIMEstamp  ,   
+duration TIMEstamp  ,   
+total_seats  NUMBER(5)
+); 
+
+CREATE  TABLE air_flight_details11 (   
+flight_id VARCHAR(10)  ,   
+flight_departure_date DATE  ,   
+price NUMBER(8,2)  ,   
+available_seats NUMBER(5),
+FOREIGN KEY (flight_id) REFERENCES air_flight11(flight_id)
+); 
+CREATE  TABLE air_ticket_info (   
+ticket_id VARCHAR(10) PRIMARY KEY ,   
+profile_id VARCHAR(10)  ,   
+flight_id VARCHAR(10)  ,   
+flight_departure_date DATE ,   
+status VARCHAR(10) NULL ,
+FOREIGN KEY(profile_id) REFERENCES air_passenger_profile11(profile_id),
+FOREIGN KEY (flight_id) REFERENCES air_flight11(flight_id)
+); 
+alter table air_ticket_info rename to air_ticket_info11;
+select * from tab;
+
+insert into air_passenger_profile11 values
+('PFL001',  'PFL001',   'LATHA',  'SANKAR',  '123 BROAD  CROSS ST,CHENNAI-48'  ,'9876543210','LATHA@GMAIL.COM' );
+insert into air_passenger_profile11 values
+('PFL002','PFL002','ARUN','PRAKASH','768  2ND STREET,BENGALURU-20', '8094564243','ARUN@AOL.COM' );
+insert into air_passenger_profile11 values
+('PFL003','PFL003','AMIT','VIKARAM','43 5TH STREET,KOCHI-84', '9497996990','AMIT@AOL.COM');
+insert into air_passenger_profile11 values
+('PFL004','PFL004','AARTHI','RAMESH','343 6TH STREET,HYDERABAD-76','9595652530','AARTHI@GMAIL.COM' );
+insert into air_passenger_profile11 values
+('PFL005','PFL005','SIVA','KUMAR','125 8TH STREET,CHENNAI-46',' 9884416986','SIVA@GMAIL.COM' );
+insert into air_passenger_profile11 values
+('PFL006', 'PFL006','RAMESH','BABU',' 109 2ND CROSS ST,KOCHI-12',    '9432198760',' RAMESH@GMAIL.COM');
+insert into air_passenger_profile11 values
+('PFL007', 'PFL007' ,'GAYATHRI','RAGHU' ,'23 2ND CROSS ST,BENGALURU-12' ,'8073245678' ,'GAYATHRI@GMAIL.COM');
+insert into air_passenger_profile11 values
+('PFL008', 'PFL008','GANESH','KANNAN', '45 3RD ST,HYDERABAD-21',   '9375237890' ,'GANESH@GMAIL.COM'); 
+select * from air_passenger_profile11;
+insert into air_credit_card_details11 values
+('PFL001', '4312467849804008','GOLD', 2, 2020);
+alter table air_credit_card_details11 modify  expiration_year NUMBER(4);
+alter table air_credit_card_details11 modify  card_number NUMBER(16);
+insert into air_credit_card_details11 values
+('PFL002',' 4763421245304900','PLATINIUM', 10 ,2015);
+insert into air_credit_card_details11 values
+('PFL003' ,'4112432643784789',' INSTANT', 3 ,2014);
+insert into air_credit_card_details11 values
+('PFL004', '4230412745604112' ,'GOLD', 7 ,2016);
+insert into air_credit_card_details11 values
+('PFL005', '4122432147834003' ,'PLATINIUM', 12, 2016);
+insert into air_credit_card_details11 values
+('PFL006', '4227438945674009' ,'GOLD' ,12, 2018);
+insert into air_credit_card_details11 values
+('PFL007', '4124459047784138','INSTANT' ,3 ,2015);
+insert into air_credit_card_details11 values
+('PFL008', '4312411745884010' ,'PLATINIUM', 9 ,2017); 
+select * from air_credit_card_details11;
