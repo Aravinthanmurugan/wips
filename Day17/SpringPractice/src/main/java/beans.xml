@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- bean definitions here -->
+
+	<bean id="emp" class="com.spring.model.Employee"
+		scope="singleton">
+		<property name="empid" value="1001" />
+		<property name="ename" value="Anil" />
+		<property name="edept" value="Finance" />
+
+	</bean>
+	<bean id="adr1" class="com.spring.model.Address" 
+	     >
+		<property name="city" value="Chennai" />
+		<property name="doorno" value="306" />
+		<property name="state" value="Tamil Nadu" />
+		<property name="pincode" value="600008" />
+		
+	</bean>
+	
+	<bean id="address" class="com.spring.model.Address"
+		>
+		<property name="city" value="Madurai" />
+		<property name="doorno" value="32" />
+		<property name="state" value="Tamil Nadu" />
+		<property name="pincode" value="625579" />
+
+	</bean>
+	<!-- 
+	<bean id="stu1" class="com.spring.model.Student" scope="singleton">
+		<property name="stuid" value="1001" />
+		<property name="stuname" value="Aravinthan" />
+		<property name="mark" value="450" />
+		
+	</bean>-->
+	<bean id="stu" class="com.spring.model.Student" 
+			init-method="init" destroy-method="destroy" >
+			
+		<constructor-arg value="8001" />
+		<constructor-arg value="Kamal" />
+		<constructor-arg value="380" />
+
+	</bean>
+	<bean id="person" class="com.spring.model.Person" >
+	<property name="pid" value="5001" />
+	<property name="pname" value="Manoj"/>
+	<property name="address" ref="adr1" />
+	</bean>
+</beans>
