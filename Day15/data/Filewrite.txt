@@ -1,0 +1,3 @@
+Hello, world 
+This is writer example 
+Java I/O is best for IO Streams 
