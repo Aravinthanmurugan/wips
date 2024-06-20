@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git-Checkout') {
+            steps {
+               git credentialsId: '0f85fb9b-c1a1-426f-a604-26a9b3d8947b', url: 'http://10.10.16.125:8929/b84user15/jenkins.git'
+            }
+        }
+        stage('Maven-Build') {
+            steps {
+                echo 'Executable jar file is built from maven'
+            }
+        }
+        stage('Docker-Image') {
+            steps {
+                echo 'create a docker image and deploy the jar file'
+            }
+        }
+        stage('Docker-Push') {
+            steps {
+                echo 'Push the docker image into respective repos in docker hub'
+            }
+        }
+        stage('Docker-Pull') {
+            steps {
+                echo 'Pull the docker image from respective repos in docker hub and run it'
+            }
+        }
+    }
+}
