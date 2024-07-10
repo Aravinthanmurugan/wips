@@ -1,0 +1,21 @@
+1.WAP that will prints fabnoeic series of n terms where no. of terms is input by the user. Using Classes and Constructor concept.
+ 
+2.WAP that will take marks of five subjects as input from the user and displays :
+         Honors above 75 %
+         First Division above 60 %
+         Second Division above 50 %
+         Third Division above 40 %
+         Failed below 40 % using SWITCH-CASE.
+ 
+3.WAP which gives the sum  of two matrices using classes.
+ 
+4.WAP which will sort the array entered by the user.( ascending /descending ).
+ 
+5.WAP that will construct pyramid of digits.
+O/P-                                        1
+                                            2 3 2
+                                         3 4 5 4 3
+                                      4 5 6 7 6 5 4 
+                                   5 6 7 8 9 8 7 6 5 
+                             6 7 8 9 10 11 10 9 8 7 6
+Q6. WAP  that will reverse the same pyramid.
