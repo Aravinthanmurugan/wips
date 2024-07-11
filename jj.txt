@@ -19,3 +19,91 @@ O/P-                                        1
                                    5 6 7 8 9 8 7 6 5 
                              6 7 8 9 10 11 10 9 8 7 6
 Q6. WAP  that will reverse the same pyramid.
+====================================================================
+Q1
+Write a  program to input length and width of a rectangle and find area of the given rectangle. How to calculate area of a rectangle in  programming. Logic to find area of a rectangle whose length and width are given in  programming.
+ 
+Example
+Input
+Enter length: 5
+Enter width: 10
+ 
+Q2
+Write a  program to input radius of a circle from user and find diameter, circumference and area of the circle. How to calculate diameter, circumference and area of a circle whose radius is given by user in  programming. Logic to find diameter, circumference and area of a circle .
+ 
+Example
+Input
+Enter radius: 10
+Output
+ 
+Diameter = 20 units
+Circumference = 62.79 units
+Area = 314 sq. units
+ 
+Q3
+Write a  program to input base and height of a triangle and find area of the given triangle. How to find area of a triangle in programming. Logic to find area of a triangle in  program.
+ 
+Apply formula to convert the temperature to Fahrenheit i.e. fahrenheit = (celsius * 9 / 5) + 32.
+ 
+Example
+Input
+Enter base of the triangle: 10
+Enter height of the triangle: 15
+Output
+ 
+Area of the triangle = 75 sq. units
+ 
+ 
+Q4
+Write a program to input length in centimeter and convert it to meter and kilometer. How to convert length from centimeter to meter and kilometer in programming. Length conversion program from centimeter to meter and centimeter to kilometer.
+ 
+Example
+Input
+Enter length in centimeter = 1000
+Output
+ 
+Length in meter = 10 m
+Length in kilometer = 0.01 km
+ 
+Required knowledge
+Arithmetic operators, Data types, Variables and expressions, Basic input/output
+ 
+Length conversion formula
+Centimeter to meter and centimeter to kilometer conversion formula is given by –
+Centimeter to meter and kilometer formula
+1m =100cm
+1km=100000cm
+ 
+Q5
+Write a  program to input any two numbers from user and swap values of both numbers
+ 
+Example
+ 
+Input
+ 
+Input first number: 22
+Input second number: 65
+Output
+ 
+First number after swapping: 65
+Second number after swapping: 22
+ 
+ 
+Q6
+Write a  program to input principle, time and rate (P, T, R) from user and find Simple Interest. How to calculate simple interest in C programming. Logic to find simple interest in  program.
+Simple interest formula is given by.
+Simple interest formula
+si=(p*r*t)/100
+Where,
+P is the principle amount
+T is the time and
+R is the rate
+ 
+Example
+Input
+Enter principle: 1200
+Enter time: 2
+Enter rate: 5.4
+Output
+ 
+Simple Interest = 129.600006
