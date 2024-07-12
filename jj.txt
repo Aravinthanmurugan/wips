@@ -107,3 +107,178 @@ Enter rate: 5.4
 Output
  
 Simple Interest = 129.600006
+==================================================================
+Problem Statement
+Implement a program to find the area of a circle by using the formula given below and display the calculated area.
+Area = pi*radius*radius
+The value of pi is 3.14.
+Sample Input and Output
+ 
+Data types and Operators - Assignment 2
+Problem Statement
+Implement a program to convert temperature from Fahrenheit to Celsius degree by using the formula given below and display the converted value.
+C = ((F-32)/9)*5 where, C represents temperature in Celsius and F represents temperature in Fahrenheit.
+ 
+ 
+ 
+ 
+Assignment on selection in java - Level 1
+Problem Statement
+Implement a program to display the sum of two given numbers if the numbers are same. If the numbers are not same, display the double of the sum.
+Sample Input and Output
+Assignment
+Write a program to find and display the product of three positive integer values based on the rule mentioned below:
+It should display the product of the three values except when one of the integer value is 7. In that case, 7 should not be included in the product and the values to its left also should not be included.
+If there is only one value to be considered, display that value itself. If no values can be included in the product, display -1.
+Note: Assume that if 7 is one of the positive integer values, then it will occur only once. Refer the sample I/O given below.
+Problem Statement
+Quadratic equation is an equation with degree 2 in the form of ax2 +bx + c = 0 where a, b and c are the coefficients.
+Implement a program to solve a quadratic equation.
+Find the discriminant value using the formula given below.
+discriminant = b2 - 4ac
+If the discriminant is 0, the values of both the roots will be same. Display the value of the root.
+If the discriminant is greater than 0, the roots will be unequal real roots. Display the values of both the roots.
+If the discriminant is less than 0, there will be no real roots. Display the message "The equation has no real root"
+Use the formula given below to find the roots of a quadratic equation.
+x = (-b ± discriminant)/2a
+ 
+Sample Input and Output
+Problem Statement
+Implement a program to find and display the maximum number out of the given three numbers.
+ 
+Sample Input and Output
+ 
+Problem Statement
+Implement a program that displays a message for a given number based on the below conditions.
+If the number is a multiple of 3, display "Zip".
+If the number is a multiple of 5, display "Zap".
+If the number is a multiple of both 3 and 5, display "Zoom",
+For all other cases, display "Invalid".
+Sample Input and Output
+ 
+problem statement
+You have x no. of 5 rupee coins and y no. of 1 rupee coins. You want to purchase an item for amount z. The shopkeeper wants you to provide exact change. You want to pay using minimum number of coins. How many 5 rupee coins and 1 rupee coins will you use? If exact change is not possible then display -1.
+====================================================================
+Problem-1
+A class called Rectangle, which models a rectangle with a length and a width (in float), is designed as shown in the following class diagram. Write the Rectangle class.
+
+Problem
+Implement the class Teacher based on the class diagram and description given below.
+Method Description
+Teacher(String teacherName, String subject, double salary)
+Initialize the values of all the instance variables appropriately with the values passed
+Create a Tester class. Create 4 objects of Teacher class. Create an array of type Teacher store the created objects and display the details of the teachers.
+
+Problem Statement:
+Objective: To understand the usage and the implementation of selection and iterational control structures
+ 
+Problem Description: Create a class FunCalculator which calculates an Armstrong number and a lucky number. An Armstrong number is one in which the sum of the cube of the digits of a number results in the number itself.
+ 
+For e.g.: 153 = 13+53+33 = 153 is an Armstrong number.
+ 
+[11:24 am] Sunil (Unverified)
+A construction company wants to keep a record of the employees working in it. There are permanent employees as well as contract employees. Contract employees work on an hourly basis whereas permanent employees are paid monthly salary. An application needs to be developed for the company for storing the employee details.
+Implement the classes based on the class diagram and description given below.
+ 
+Method Description
+Employee
+Employee(intemployeeId, String employeeName)
+Initialize the employeeId and employeeName instance variables appropriately with the values passed to the constructor.
+Implement the getter and setter methods appropriately.
+PermanentEmployee
+PermanentEmployee(intempId, String name, double basicPay, double hra, float experience)
+Initialize the employeeId, employeeName, basicPay, hra and experience instance variables appropriately with the values passed to the constructor.
+calculateMonthlySalary()
+Calculate the salary of the employee using the formula given below.
+salary = basic pay + hra + variable component
+Variable component is calculated based on the employee's experience according to the table given below.
+ 
+Implement the getter and setter methods appropriately.
+ContractEmployee
+ContractEmployee(intempId, String name, double wage, float hoursWorked)
+Initialize the employeeId, employeeName, wage and hoursWorked instance variables appropriately with the values passed to the constructor.
+calculateSalary()
+Calculate the salary of the employee using the formula given below.
+salary = hoursWorked * wage
+Implement the getter and setter methods appropriately.
+ 
+Test the functionalities using the provided Tester class.
+Input and Output       
+For PermanentEmployee                                                      
+Input
+Output
+For ContractEmployee                                                      
+Input
+ 
+Output
+ 
+ 
+
+Problem Statement
+Write a java program which displays the count of the names that matches a given pattern from a list of names provided.
+Consider the pattern characters to be:
+1. "_ at" where "_" can be one occurrence of any character
+2. "%at%" where "%" can have zero or any number of occurrences of a character
+Sample Input
+	
+Expected Output
+
+
+[Hat, Cat, Rabbit, Matter]
+	
+_at -> 2
+%at% -> 3
+
+
+[2:10 pm] Sunil (Unverified)
+A bank wants to conduct examinations for recruitment. You need to develop an application for the applicants to submit their details by implementing the classes based on the class diagram and description given below.
+Validator
+Method Description
+validateName(String name)
+Validate that the name is not null or empty. If the name is null or empty, return false, else return true.
+validateJobProfile(String jobProfile)
+Validate that the jobProfile is either 'Associate' or 'Clerk' or 'Executive' or 'Officer'. If the jobProfile is valid, return true, else return false. Perform case-insensitive comparison.
+validateAge(int age)
+Validate that the age is between 18 and 30 (both inclusive). If the age is valid, return true, else return false
+validate(Applicant applicant)
+Validate the details of the applicant by calling the appropriate methods. If any validation fails, throw user defined exceptions based on the below description.                          
+
+ 
+Implement the required user defined exception classes.
+ 
+Test the functionalities using the main method of the provided Tester class based on the below description.
+Create an object of Applicant class and set the values of all the instance variables
+Validate the details of the applicant by invoking the validate() method of the Validator class
+If all the details are valid, display 'Application submitted successfully!', else, display appropriate error message
+ 
+Note: The Tester class will not be verified.
+Sample Input and Output
+Input
+ 
+Output
+ 
+Input
+ 
+Output
+ 
+ 
+ 
+[2:11 pm] Sunil (Unverified)
+Complete the removeWhiteSpaces() method given in the Tester class.
+Method Description
+removeWhiteSpaces(String str)
+Remove all the white spaces from the string passed to the method and return the modified string.
+Test the functionalities using the main() method of the Tester class. 
+ 
+Sample Input and Output
+ 
+
+
+Food Corner home delivers vegetarian and non-vegetarian meals to its customers based on the order.
+A vegetarian combo costs $12 per plate and a non-vegetarian combo costs $15 per plate. Apart from the cost per plate of food, customers are also charged for home delivery based on the distance in kms from the restaurant to the delivery point. The delivery charges are as mentioned below
+Given the type of food, quantity (no. of plates) and the distance in kms from the restaurant to the delivery point, implement a program to calculate the final bill amount to be paid by a customer.
+The below information must be used to check the validity of the data provided by the customer: 
+Type of food must be 'V' for vegetarian and 'N' for non-vegetarian.
+Distance in kms must be greater than 0.
+Quantity ordered should be minimum 1.
+If any of the input is invalid, the bill amount should be displayed as -1.
