@@ -1,0 +1,33 @@
+Step 1: Write a Test
+
+-Identify a specific requirement or functionality to test
+-Write a test that covers the desired behavior
+-The test should be independent of the implementation details
+
+Step 2: Run the Test and See it Fail
+
+-Run the test to ensure it fails (since no code has been written yet)
+-This step verifies that the test is actually testing the desired behavior
+
+Step 3: Write the Code
+
+-Write the minimal amount of code necessary to pass the test
+-Focus on making the test pass, rather than writing perfect code
+-Refactor the code to make it maintainable and efficient
+
+Step 4: Run the Test and See it Pass
+
+-Run the test again to ensure it passes
+-Verify that the code meets the desired behavior
+
+Step 5: Refactor the Code
+
+-Refactor the code to make it more maintainable, efficient, and easy to understand
+-Remove any duplication or unnecessary complexity
+-Benefits of TDD
+
+-Bug Reduction: Writing tests before code helps catch bugs early, reducing the overall number of bugs in the system
+-Faster Development: TDD helps developers focus on the required functionality, reducing the time spent on debugging and rework
+-Improved Code Quality: TDD promotes writing clean, modular, and maintainable code
+-Increased Confidence: TDD gives developers confidence in their code, reducing the fear of making changes
+Better Design: TDD encourages developers to think about the design and architecture of the system, leading to a better overall design

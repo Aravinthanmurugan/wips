@@ -1,0 +1,27 @@
+          
+TDD(Test-Driven Development):
+===========================
+|  Write a test     
+|  Run the test     
+|  Write the code   
+|  Refactor the code
+         
+
+BDD(Behavior-Driven Development):
+===============================
+|  Define system  
+|  behavior using  
+|  Gherkin syntax  
+|  Write code to    
+|  implement behavior
+         
+
+ FDD (Feature-Driven Development):
+=================================
+|  Identify and  
+|  prioritize features
+|  Develop features  
+|  in iterations    
+|  Test and refine  
+|  features         
+   
