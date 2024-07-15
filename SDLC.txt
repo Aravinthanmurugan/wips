@@ -1,0 +1,47 @@
+
+
+
+SDLC Overview
+================
+
+**Requirements**
+ Define project scope, goals, and deliverables
+ Identify stakeholders and their needs
+ Gather and document requirements
+ Importance: Lays foundation for entire project
+ Output: Requirements document
+
+**Design**
+ Translate requirements into technical specifications
+ Create architecture, components, and interfaces
+ Plan for scalability, security, and performance
+ Importance: Ensures solution meets requirements and is feasible
+ Output: Design document
+
+**Implementation**
+ Write code, develop software, and integrate components
+ Use programming languages, tools, and frameworks
+ Conduct unit testing and debugging
+ Importance: Brings design to life and creates working software
+ Output: Working software
+
+**Testing**
+ Verify software meets requirements and works as expected
+ Identify and fix defects and bugs
+ Conduct various types of testing (unit, integration, system)
+ Importance: Ensures software quality and reliability
+ Output: Test reports and defect fixes
+
+**Deployment**
+ Release software to production environment
+ Configure and set up infrastructure
+ Train users and provide support
+ Importance: Makes software available to end-users
+ Output: Live software in production
+
+Interconnections:
+ Requirements → Design: Inform design decisions
+ Design → Implementation: Guides development
+ Implementation → Testing: Provides software for testing
+ Testing → Deployment: Ensures software quality before release
+ Deployment → Requirements: Feedback loop for future improvements
