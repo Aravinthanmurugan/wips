@@ -34,7 +34,7 @@
         // Additional logic can be added for handling responses
     }
 }
-[10:54 pm, 18/7/2024] Aravinthan: public class Restconf {
+[10:54 pm, 18/7/2024] Aravinthan:public class Restconf {
     private String baseUrl;
     private String username;
     private String password;
@@ -55,7 +55,31 @@
     }
 
     // Method to send HTTP POST request
-    public void sendPostRequest(String endpoint, String r…
+    public void sendPostRequest(String endpoint, String requestBody) {
+        // Implement logic to send HTTP POST request to Restconf endpoint
+        String fullUrl = baseUrl + endpoint;
+        System.out.println("Sending POST request to Restconf endpoint: " + fullUrl);
+        System.out.println("Request body: " + requestBody);
+        // Additional logic can be added for handling responses
+    }
+
+    // Method to send HTTP PUT request
+    public void sendPutRequest(String endpoint, String requestBody) {
+        // Implement logic to send HTTP PUT request to Restconf endpoint
+        String fullUrl = baseUrl + endpoint;
+        System.out.println("Sending PUT request to Restconf endpoint: " + fullUrl);
+        System.out.println("Request body: " + requestBody);
+        // Additional logic can be added for handling responses
+    }
+
+    // Method to send HTTP DELETE request
+    public void sendDeleteRequest(String endpoint) {
+        // Implement logic to send HTTP DELETE request to Restconf endpoint
+        String fullUrl = baseUrl + endpoint;
+        System.out.println("Sending DELETE request to Restconf endpoint: " + fullUrl);
+        // Additional logic can be added for handling responses
+    }
+}
 [10:54 pm, 18/7/2024] Aravinthan: public class Main {
     public static void main(String[] args) {
         // Example usage of Netconf class
