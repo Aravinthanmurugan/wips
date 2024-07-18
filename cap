@@ -1,0 +1,125 @@
+[10:53 pm, 18/7/2024] Aravinthan: public class Netconf {
+    private String ipAddress;
+    private int port;
+    private String username;
+    private String password;
+
+    // Constructor
+    public Netconf(String ipAddress, int port, String username, String password) {
+        this.ipAddress = ipAddress;
+        this.port = port;
+        this.username = username;
+        this.password = password;
+    }
+
+    // Method to connect to Netconf server
+    public void connect() {
+        // Implement Netconf connection logic here
+        System.out.println("Connecting to Netconf server at " + ipAddress + ":" + port);
+        System.out.println("Username: " + username);
+        // Additional logic can be added as per Netconf protocol
+    }
+
+    // Method to close Netconf session
+    public void disconnect() {
+        // Implement Netconf disconnection logic here
+        System.out.println("Disconnecting from Netconf server");
+        // Additional cleanup logic can be added
+    }
+
+    // Method to send Netconf RPC request
+    public void sendRPC(String rpcRequest) {
+        // Implement logic to send RPC request over Netconf
+        System.out.println("Sending RPC request over Netconf: " + rpcRequest);
+        // Additional logic can be added for handling responses
+    }
+}
+[10:54 pm, 18/7/2024] Aravinthan: public class Restconf {
+    private String baseUrl;
+    private String username;
+    private String password;
+
+    // Constructor
+    public Restconf(String baseUrl, String username, String password) {
+        this.baseUrl = baseUrl;
+        this.username = username;
+        this.password = password;
+    }
+
+    // Method to send HTTP GET request
+    public void sendGetRequest(String endpoint) {
+        // Implement logic to send HTTP GET request to Restconf endpoint
+        String fullUrl = baseUrl + endpoint;
+        System.out.println("Sending GET request to Restconf endpoint: " + fullUrl);
+        // Additional logic can be added for handling responses
+    }
+
+    // Method to send HTTP POST request
+    public void sendPostRequest(String endpoint, String r…
+[10:54 pm, 18/7/2024] Aravinthan: public class Main {
+    public static void main(String[] args) {
+        // Example usage of Netconf class
+        Netconf netconf = new Netconf("192.168.1.100", 830, "admin", "password");
+        netconf.connect();
+        netconf.sendRPC("<get-config/>");
+        netconf.disconnect();
+
+        // Example usage of Restconf class
+        Restconf restconf = new Restconf("https://api.example.com/restconf/", "admin", "password");
+        restconf.sendGetRequest("data/resource");
+        restconf.sendPostRequest("operations/modify", "{ \"key\": \"value\" }");
+        restconf.sendPutRequest("data/resource/123", "{ \"name\": \"updated resource\" }");
+        restconf.sendDeleteRequest("data/resource/123");
+    }
+}
+[10:55 pm, 18/7/2024] Aravinthan: <dependencies>
+    <dependency>
+        <groupId>com.tailf.jnc</groupId>
+        <artifactId>netconf4j</artifactId>
+        <version>0.5.9</version>
+    </dependency>
+</dependencies>
+[10:55 pm, 18/7/2024] Aravinthan: <dependencies>
+    <dependency>
+        <groupId>org.glassfish.jersey.core</groupId>
+        <artifactId>jersey-client</artifactId>
+        <version>3.0.2</version>
+    </dependency>
+    <dependency>
+        <groupId>org.glassfish.jersey.media</groupId>
+        <artifactId>jersey-media-json-jackson</artifactId>
+        <version>3.0.2</version>
+    </dependency>
+</dependencies>
+
+
+  <project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>netconf-restconf-example</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    
+    <dependencies>
+        <!-- Netconf Dependencies -->
+        <dependency>
+            <groupId>com.tailf.jnc</groupId>
+            <artifactId>netconf4j</artifactId>
+            <version>0.5.9</version>
+        </dependency>
+        
+        <!-- Restconf Dependencies -->
+        <dependency>
+            <groupId>org.glassfish.jersey.core</groupId>
+            <artifactId>jersey-client</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish.jersey.media</groupId>
+            <artifactId>jersey-media-json-jackson</artifactId>
+            <version>3.0.2</version>
+        </dependency>
+    </dependencies>
+</project>
