@@ -1,3 +1,5 @@
+mvn clean install -P autoInstallPackage -Dmaven.wagon.http.ssl.insecure=true -Dmaven.wagon.http.ssl.allowall=true
+
 [10:53 pm, 18/7/2024] Aravinthan: public class Netconf {
     private String ipAddress;
     private int port;
